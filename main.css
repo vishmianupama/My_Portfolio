@@ -76,22 +76,21 @@ body.dark-mode textarea {
 }
 
 .mode-container {
-    width: 30px;           /* රවුමේ පළල */
-    height: 30px;          /* රවුමේ උස */
-    background-color: var(--primary); /* රවුමේ පසුබිම් වර්ණය */
-    border-radius: 50%;    /* රවුම් හැඩය ලබා දීමට */
+    width: 30px;          
+    height: 30px;          
+    border-radius: 50%;    
     display: flex;
-    align-items: center;   /* අයිකනය සිරස්ව මැදට ගැනීමට */
-    justify-content: center; /* අයිකනය තිරස්ව මැදට ගැනීමට */
+    align-items: center;   
+    justify-content: center; 
     transition: 0.3s ease;
 }
 
 .mode-container i {
-    color: white;          /* හඳේ අයිකනය සුදු පැහැ ගැන්වීමට */
+    color: white;          
     font-size: 18px;
 }
 
-/* මවුසය උඩට ගෙන ගිය විට වෙනස් වන ආකාරය */
+
 .mode-container:hover {
     background-color: var(--accent);
     transform: scale(1.1);
@@ -100,7 +99,6 @@ body.dark-mode textarea {
     transform: rotate(20deg);
 }
 
-/* Navigation */
 header {
     position: fixed;
      top: 20px; 
@@ -122,9 +120,9 @@ nav {
     padding: 15px 10%;
 }
 .nav-container {
-    background:palevioletred
+    background: palevioletred;
     backdrop-filter: blur(10px);
-    padding: 15px 40px;
+    padding:15px 40px;
     border-radius: 50px;
     display: flex; justify-content: space-between; align-items: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
