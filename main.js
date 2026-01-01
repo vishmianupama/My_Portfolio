@@ -31,19 +31,18 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const icon = themeToggle.querySelector('i');
 
-// කලින් save කරපු theme එකක් තියෙනවාද බලන්න
+
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
-    icon.classList.replace('fa-moon', 'fa-sun'); // ඉරේ අයිකනය පෙන්වන්න
+    icon.classList.replace('fa-moon', 'fa-sun'); 
 }
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     
-    // අයිකනය මාරු කිරීම
     if (body.classList.contains('dark-mode')) {
         icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark'); // පරිශීලකයාගේ තේරීම මතක තබා ගන්න
+        localStorage.setItem('theme', 'dark'); 
     } else {
         icon.classList.replace('fa-sun', 'fa-moon');
         localStorage.setItem('theme', 'light');

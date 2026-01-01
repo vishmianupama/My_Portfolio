@@ -1,10 +1,12 @@
  :root {
     --primary: #3E1E68;
     --secondary: #5D2F77;
-    --accent: #E45A92;
+    --accent: #ff1493;
     --highlight: #FFACAC;
     --bg: #F8F9FA;
     --white: #FFFFFF;
+    --text-main:#333333;
+    --text-dim:#555555;
 }
 
 * {
@@ -109,9 +111,9 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8); /* සුදු පාට මඳක් විනිවිද පෙනෙන ලෙස */
-    backdrop-filter: blur(10px); /* පසුබිම blur කරන ලස්සන effect එක */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* ඉතා සියුම් හෙවනැල්ලක් */
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,7 +142,7 @@ nav a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ff4d6d; /* ඔබේ තේමාවේ පාට (Pink/Red) */
+    background-color: #ff4d6d;
     transition: 0.3s;
 }
 
@@ -154,7 +156,7 @@ nav a:hover::after {
 .hero-card {
     background: var(--white); width: 90%; padding: 40px; margin: 0 auto;
     border-radius: 50px; display: flex; align-items: center;
-    box-shadow: 0 20px 60px rgba(62, 30, 104, 0.08);
+    box-shadow: 0 20px 60px rgba(62, 30, 104, 0.08); border: 1px solid #E45A92; outline: none; box-shadow: 0 5px 5px #E45A92;
     background: linear-gradient(135deg,90deg,#5D2F77 100%);
 }
 
@@ -164,25 +166,22 @@ nav a:hover::after {
 .hero-content span { color: var(--accent); }
 .hero-desc { color: #666; margin-bottom: 30px; max-width: 500px; }
 
-/* රවුම් හැඩයේ පසුබිම */
 .profile-circle {
-    width: 350px;           /* රවුමේ පළල */
-    height: 350px;          /* රවුමේ උස */
-    border-radius: 50%;     /* මෙය අනිවාර්යයෙන්ම 50% විය යුතුයි */
+    width: 350px;          
+    height: 350px;          
+    border-radius: 50%;     
     display: flex;
-    align-items: center;    /* රූපය මැදට ගැනීමට */
+    align-items: center;    
     justify-content: center;
-    overflow: hidden;       /* රවුමෙන් පිටතට යන කොටස් කැපීමට */
-    border: 8px solid var(--primary); /* රූපයේ පරිදි සුදු පැහැති වටයක් (border) */
+    overflow: hidden;       
+    border: 8px solid var(--primary);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* රවුම ඇතුළත ඇති රූපය (Image) */
 .profile-circle img {
-    width: 100%;            /* රවුමට සරිලන සේ විශාල කිරීමට */
+    width: 100%;            
     height: 100%;
     object-fit: cover;  
-    /* රූපය ඇද නොවී නිවැරදිව පෙනීමට */
 
 }
 .profile-circle {
@@ -191,7 +190,6 @@ nav a:hover::after {
     box-shadow: 0 0 20px var(--primary), inset 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Hero layout එක සඳහා (Responsive) */
 .hero-image {
     flex: 1;
     display: flex;
@@ -231,20 +229,119 @@ nav a:hover::after {
 .social-sidebar i:hover { color: var(--accent); transform: scale(1.2); }
 
 .social-icon {
-    width: 45px;          /* රවුමේ පළල */
-    height: 45px;         /* රවුමේ උස */
+    width: 45px;          
+    height: 45px;         
     display: flex;
-    align-items: center;  /* අයිකනය සිරස්ව මැදට ගැනීමට */
-    justify-content: center; /* අයිකනය තිරස්ව මැදට ගැනීමට */
-    border: 2px solid var(--primary); /* රවුමේ වටේ ඉර (Border) */
-    border-radius: 50%;   /* රවුම් හැඩය ලබා දීමට */
+    align-items: center;  
+    justify-content: center; 
+    border: 2px solid var(--primary); 
+    border-radius: 50%;   
     text-decoration: none;
-    transition: 0.3s ease; /* වෙනස් වීමේ වේගය */
+    transition: 0.3s ease; 
 }
 
 .social-icon i {
-    font-size: 20px;      /* අයිකනයේ ප්‍රමාණය */
+    font-size: 20px;     
     color: var(--primary);
+}
+.about-section {
+    padding: 60px 20px;
+    display: block; 
+    width: 100%;
+    text-align: center; 
+}
+
+.about-card {
+    background-color: var(--white); 
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 40px;      
+    border: 2px solid #E45A92; 
+    box-shadow: 0 5px 5px #E45A92; 
+}
+
+.profile-pic {
+    width: 280px;
+    height: 320px;
+    object-fit: cover;        
+    border-radius: 30px;     
+    border: 2px solid #f0f0f0;
+}
+
+.about-content-area {
+    flex: 1;
+}
+
+.about-title {
+    color: #E45A92;           
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    color: #1a1a4b;          
+    margin-bottom: 15px;
+}
+
+.about-description {
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-subtitle {
+    color: var(--primary); 
+}
+
+/* ප්‍රධාන විස්තරය සඳහා */
+.about-description {
+    color: var(--text-color); 
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.personal-info p {
+    color: var(--text-color);
+}
+
+.personal-info strong {
+    color: var(--accent); 
+}
+
+.personal-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.personal-info strong {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 25px;
+    color: #1a1a4b;
+}
+info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-size: 1.1rem;
+    color: #444;
+}
+
+
+@media (max-width: 768px) {
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    .profile-pic {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Sections */
@@ -259,33 +356,31 @@ nav a:hover::after {
 .bar { background: #eee; height: 8px; border-radius: 10px; margin-top: 5px; }
 .progress { background: var(--accent); height: 100%; border-radius: 10px; }
 
-/* Skill box එක මත මවුස් එක තබන විට */
 .skill-box {
-    border: 2px solid transparent; /* මුලින් බෝඩර් එකක් නොපෙනී තිබීමට */
-    transition: 0.3s ease; /* මෘදු ලෙස පාට මාරු වීමට */
+    border: 2px solid transparent; 
+    transition: 0.3s ease; 
 }
 .btn-cv {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #E45A92; /* ඇතුළත වර්ණය නැති කිරීමට */
-    color: white !important;     /* තද රෝස පැහැති අකුරු */ /* "My Projects" වල ඇති දම් පැහැති වටය (Border) */          /* රවුම් හැඩය සඳහා */
+    background-color: #E45A92; 
+    color: white !important;           
     text-decoration: none;   
     border: 2px solid white;  
-    border-radius: 50px;   /* යටින් ඉර ඉවත් කිරීමට */
+    border-radius: 50px;   
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-/* මවුසය උඩට ගෙන ගිය විට (Hover) */
 .btn-cv:hover {
-    background-color: #E45A92;     /* තද රෝස පැහැය පිරවීමට */
-    color: white !important;       /* අකුරු සුදු කිරීමට */
+    background-color: #E45A92;  
+    color: white !important;       
     border-color: #E45A92;
-    transform: translateY(-3px);    /* මඳක් ඉහළට එසවීමට */
+    transform: translateY(-3px);  
 }
 .skill-box:hover {
-    border-color: var(--accent); /* මවුස් එක තැබූ විට රෝස පාට වේ */
+    border-color: var(--accent); 
     transform: translateY(-10px); box-shadow: 0 15px 40px rgba(228, 90, 148, 0.2); border-color: var(--accent); }
  
 
@@ -297,11 +392,12 @@ nav a:hover::after {
 /* Contact Form */
 .contact-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; max-width: 600px; margin-right: auto; margin-left: auto;}
 .contact-form input, .contact-form textarea {
-    padding: 20px; border-radius: 15px; border: 1px solid #E45A92; outline: none; 
+    padding: 20px; border-radius: 15px; border: 1px solid #E45A92; outline: none; box-shadow: 0 5px 5px #E45A92;
 
 }
 
 .phone-display { text-align: center; font-weight: 700; color: var(--accent); font-size: 20px; }
+
 
 footer { padding: 50px; }
 .footer-card {
@@ -312,19 +408,18 @@ footer { padding: 50px; }
 .footer-socials i { color: var(--highlight); font-size: 24px; }
 
 .footer {
-    background-color: #0f172a; /* තද නිල් පැහැය */
+    background-color: #0f172a; 
     color: #ffffff;
     padding: 50px 0 20px;
     font-family: 'Poppins', sans-serif;
 }
 .footer-links {
-    padding-left: 80px; /* මෙම අගය වැඩි කරන තරමට කොටස දකුණු පැත්තට තල්ලු වේ */
+    padding-left: 80px; 
 }
 
-/* ෆෝන් එකෙන් බලන විට මෙය අවුල් නොවීමට පහත කේතයද එක් කරන්න */
 @media (max-width: 768px) {
     .footer-links {
-        padding-left: 0; /* ෆෝන් එකේදී සාමාන්‍ය පරිදි පෙන්වීමට */
+        padding-left: 0;
         text-align: center;
     }
 }
@@ -338,7 +433,7 @@ footer { padding: 50px; }
 }
 
 .footer-about h3, .footer-links h4, .footer-contact h4 {
-    color: #38bdf8; /* ලා නිල් පැහැය */
+    color: #38bdf8; 
     margin-bottom: 15px;
 }
 
@@ -393,4 +488,84 @@ footer { padding: 50px; }
     .hero-content h1 { font-size: 36px; }
     .nav-links { display: none; }
     .hero-btns { justify-content: center; }
+}
+/* Projects Section Styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-card {
+    padding: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    border: 3px solid #E45A92;
+}
+
+.project-img-placeholder {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img-placeholder i {
+    font-size: 60px;
+    color: white;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project-info p {
+    font-size: 14px;
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(228,90,146,0.2);
+}
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    display: block;
+    border-radius: 20px
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 15px 15px 0 0;
+}
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-info {
+    flex-grow: 1; 
 }
